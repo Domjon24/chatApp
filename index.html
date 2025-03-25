@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Chat App</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/game-styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+
+  </head>
+<body>
+    <div class="container-fluid">
+        <div class="main row justify-content-center">
+            <div class="col-12 mb-3 text-center game-container">
+                <canvas id="gameBoard" height="500" width="500"></canvas>
+                <div id="scoreText">0</div>
+                <input type="hidden" id="hiddenInput" name="myHiddenInput" value="true">
+                <button type="button" class="btn btn-secondary" id="resetBtn">Reset</button>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-7 mb-3 text-center msg">
+                <ul id="messages"></ul>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col col-md-auto text-center">
+                    <form id="form" action="">
+                        <input id="input" autocomplete="off" />
+                        <button>Send</button>
+                    </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+  <script src="/scripts/main.js"> </script>
+  <script src="/scripts/snake.js"> </script>
+</html>
