@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Flex</title>
+    <link rel="stylesheet" type="text/css" href="public/css/styles2.css">
+    <link rel="stylesheet" type="text/css" href="/css/game-styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div class="parent">
+        <div class="div1 text-center"> 
+            logo div1
+        </div>
+        <div class="div2"> sidenav div2
+
+            <nav class="nav flex-column">
+                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="#">Users</a>
+                <a class="nav-link" href="#">Rooms</a>
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </nav>
+
+        </div>
+
+        <div class="div3">
+            div 3
+        </div>
+
+        <div class="div4"> 
+            <div class="row justify-content-center">
+                <div class="text-center msg">
+                    <ul id="messages">
+                        <li><strong>Messages Div 4</strong> dolor sit amet, consectetur adipiscing elit. Donec varius luctus egestas.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius luctus egestas.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius luctus egestas.</li>
+                        <li>Morbi et commodo magna.</li>
+                        <li>Nullam eu tellus eros.</li>
+                        <li>Praesent in sodales lacus, vel elementum enim. </li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius luctus egestas.</li>
+                        <li>Curabitur gravida feugiat nulla at vestibulum.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="div5">
+            <div class=" justify-content-center">
+                <div class=" text-center">
+                        <form id="form" action="">
+                            <input class="form-control" type="text" placeholder="Enter Message" id="input" autocomplete="off" />
+                            <button class='btn btn-success btn-block'>Send</button>
+                        </form>
+                </div>
+            </div> 
+        </div>
+
+        <div class="div6"> 
+            <div class=" justify-content-center">
+                    snake div6
+                <div class="col text-center game-container">
+                    <canvas id="gameBoard" height="400" width="400"></canvas>
+                    <div id="scoreText">0</div>
+                    <input type="hidden" id="hiddenInput" name="myHiddenInput" value="true">
+                    <button type="button" class="btn btn-secondary" id="resetBtn">Reset</button>
+                    <button type="button" class="btn btn-primary" onclick="gameStart(); hideStartBtn()" id="startBtn">Start</button>
+                </div>
+                </div>
+        </div>
+
+    </div>
+        
+</body>
+<script src="/scripts/snake.js"> </script>
+</html>
