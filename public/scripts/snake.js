@@ -123,7 +123,7 @@ function changeDirection(event){
             break;
     }
 };
-// function checkGameOver(){
+
 //     switch(true){
 //         case (snake[0].x < 0):
 //             running = false;
@@ -180,7 +180,7 @@ function checkGameOver() {
 
     if (!running) {
         socket.emit('gameOver', score);  // Emit game over event with the score
-        displayGameOver();  // Show "Game Over" message
+        displayGameOver();  
     }
 };
 
