@@ -3,6 +3,7 @@ const gameBoard = document.querySelector("#gameBoard");
 const ctx = gameBoard.getContext("2d");
 const scoreText = document.querySelector("#scoreText");
 const resetBtn = document.querySelector(".btn-secondary");
+// const startBtn = document.querySelector(".btn-primary");
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;
 const boardBackground = "yellow";
@@ -27,9 +28,9 @@ let snake = [ //body parts of snake
 
 window.addEventListener("keydown", changeDirection);
 resetBtn.addEventListener("click", resetGame);
+// startBtn.addEventListener("click", gameStart);
 
-gameStart();
-
+// gameStart();
 
 function gameStart(){
     running = true;
@@ -38,6 +39,12 @@ function gameStart(){
     drawFood();
     nextTick();
 };
+function hideStartBtn(){
+
+    var button = document.getElementById('startBtn');  // Corrected ID to 'startBtn'
+    button.style.display = "none";  // Hide the button
+
+}
 function nextTick(){
     if(running){
         setTimeout(()=> {
