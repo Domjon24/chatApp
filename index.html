@@ -1,43 +1,88 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Chat App</title>
+    <title>KiKiCo</title>
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
-    <!-- <link rel="stylesheet" type="text/css" href="/css/game-styles.css"> -->
+    <link rel="stylesheet" type="text/css" href="/css/game-styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="/socket.io/socket.io.js"></script>
-
-  </head>
+   
+</head>
 <body>
-    <div class="container-fluid">
-        <div class="main row justify-content-center">
-            <div class="col-12 mb-3 text-center game-container">
-                <canvas id="gameBoard" height="500" width="500"></canvas>
-                <div id="scoreText">0</div>
-                <input type="hidden" id="hiddenInput" name="myHiddenInput" value="true">
-                <button type="button" class="btn btn-secondary" id="resetBtn">Reset</button>
-                <button type="button" class="btn btn-primary" onclick="gameStart(); hideStartBtn()" id="startBtn">Start</button>
-            </div>
-            </div>
+    <div class="parent">
+
+        <div class="div1 text-center"> 
+            logo div1
         </div>
-        <div class="row justify-content-center">
-            <div class="col-7 mb-3 text-center msg">
-                <ul id="messages"></ul>
-            </div>
+        <div class="div2"> 
+            <nav class="nav flex-column">
+                <a class="nav-link glyphicon glyphicon-home" href="#"> </a>
+                <a class="nav-link glyphicon glyphicon-user" href="#"></a>
+                <a class="nav-link glyphicon glyphicon-globe" href="#"></a>
+              </nav>
+
         </div>
-        <div class="row justify-content-center">
-            <div class="col col-md-auto text-center">
-                    <form id="form" action="">
-                        <input id="input" autocomplete="off" />
-                        <button>Send</button>
-                    </form>
+
+        <div class="div3 row justify-content-center">
+            <ul>
+                <li>user 1</li>
+                <li>User 2</li>
+                <li>User 3</li>
+                <li>User 4</li>
+                <li>User 5</li>
+            </ul>
+        </div>
+
+        <div class="div4"> 
+            <div class="row justify-content-center">
+                <div class="text-center msg">
+                    <ul id="messages">
+                        <li><strong>Messages Div 4</strong> dolor sit amet, consectetur adipiscing elit. Donec varius luctus egestas.</li>
+                        <li>Curabitur gravida feugiat nulla at vestibulum.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius luctus egestas.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius luctus egestas.</li>
+                        <li>Morbi et commodo magna.</li>
+                        <li>Nullam eu tellus eros.</li>
+                        <li>Praesent in sodales lacus, vel elementum enim. </li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius luctus egestas.</li>
+                        <li>Curabitur gravida feugiat nulla at vestibulum.</li>
+                        <li>Morbi et commodo magna.</li>
+                    </ul>
+                </div>
             </div>
+
+        </div>
+        
+        <div class="div5">
+            <div class=" justify-content-center">
+                <div class=" text-center">
+                        <form id="form" action="">
+                            <input class=" mb-3 form-control" type="text" placeholder="Enter Message" id="input" autocomplete="off" />
+                            <button class='btn btn-success btn-block'>Send</button>
+                        </form>
+                </div>
+            </div> 
+        </div>
+
+        <div class="div6"> 
+            <div class=" justify-content-center">
+                    snake div6
+                <div class="col text-center game-container">
+                    <canvas id="gameBoard" height="400" width="400"></canvas>
+                    <div id="scoreText">0</div>
+                    <input type="hidden" id="hiddenInput" name="myHiddenInput" value="true">
+                    <button type="button" class="btn btn-secondary" id="resetBtn">Reset</button>
+                    <button type="button" class="btn btn-primary" onclick="gameStart(); hideStartBtn()" id="startBtn">Start</button>
+                </div>
+                </div>
         </div>
 
     </div>
+        
 </body>
- 
-  <script src="/scripts/main.js"> </script>
-  <!-- <script src="/scripts/snake.js"> </script> -->
+<script src="/scripts/main.js"> </script>
+<script src="/scripts/snake.js"> </script>
 </html>
