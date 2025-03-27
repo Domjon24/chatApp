@@ -30,9 +30,6 @@
             <ul id="user-list">
                 <li>user 1</li>
                 <li>User 2</li>
-                <li>User 3</li>
-                <li>User 4</li>
-                <li>User 5</li>
             </ul>
         </div>
 
@@ -43,12 +40,6 @@
                         <li><strong>Messages Div 4</strong> dolor sit amet, consectetur adipiscing elit. Donec varius luctus egestas.</li>
                         <li>Curabitur gravida feugiat nulla at vestibulum.</li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius luctus egestas.</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius luctus egestas.</li>
-                        <li>Morbi et commodo magna.</li>
-                        <li>Nullam eu tellus eros.</li>
-                        <li>Praesent in sodales lacus, vel elementum enim. </li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius luctus egestas.</li>
-                        <li>Curabitur gravida feugiat nulla at vestibulum.</li>
                         <li>Morbi et commodo magna.</li>
                     </ul>
                 </div>
@@ -68,18 +59,16 @@
         </div>
 
         <div class="div6"> 
-            <div class=" justify-content-center">
-                    snake div6
-                <div class="col text-center game-container">
-                    <canvas id="gameBoard" height="400" width="400"></canvas>
+            <div class=" col text-center game-container">
+                <!-- <div class="col text-center game-container justify-content-center"> -->
+                    <canvas id="gameBoard" height="500" width="500"></canvas>
+                    <!-- <canvas id="gameBoard"></canvas> -->
                     <div id="scoreText">0</div>
                     <input type="hidden" id="hiddenInput" name="myHiddenInput" value="true">
                     <button type="button" class="btn btn-secondary" id="resetBtn">Reset</button>
                     <button type="button" class="btn btn-primary" onclick="gameStart(); hideStartBtn()" id="startBtn">Start</button>
-                </div>
-                </div>
         </div>
-
+        </div>
     </div>
         
 </body>

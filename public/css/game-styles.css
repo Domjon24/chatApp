@@ -1,8 +1,19 @@
 canvas{
-    background-color: aqua;
+    background-color: rgba(232, 253, 253, 0.629);
+    
 }
-#resetBtn{
+#resetBtn, #startBtn{
     font-size: 16px;
     height: 50px;
     width: 100px;
+}
+
+#gameBoard{
+    /* height: 40vh;
+    width: 80%; */
+    border: 3px solid #2A2E45;
+    padding: 1rem;
+}
+#scoreText{
+    font-size: x-large;
 }

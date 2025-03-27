@@ -3,7 +3,7 @@ const socket = io();
         const form = document.getElementById('form');
         const input = document.getElementById('input');
         const messages = document.getElementById('messages');
-        const users = document.getElementById('user-list');
+        const userList = document.getElementById('user-list');
       
         form.addEventListener('submit', (e) => {
           e.preventDefault();
@@ -24,13 +24,16 @@ const socket = io();
           console.log(message);
           const item = document.createElement('li');
           item.textContent = message;
-          users.appendChild(item);
+          userList.appendChild(item);
           window.scrollTo(0, document.body.scrollHeight);
+          
+          socket.on('disconnection', message => {
+            console.log(message);
+          })
+            
         })
 
-        socket.on('disconnection', message => {
-          console.log(message);
-        })
+        
 
         socket.on('scoreUpdate', (scoreMessage) => {
           const scoreItem = document.createElement('li');

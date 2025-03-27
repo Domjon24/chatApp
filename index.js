@@ -33,7 +33,7 @@ io.on('connection', (socket) => {
 
   socket.on('gameOver', (score) => {
 
-    io.emit('scoreUpdate', `Game over! User# ${socket.id}'s score: ${score}`);
+    io.emit('scoreUpdate', `Game over! ${socket.id} got a score of ${score}`);
 });
 
 
