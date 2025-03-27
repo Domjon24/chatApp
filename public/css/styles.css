@@ -1,4 +1,6 @@
-
+html{
+    height: 100%
+}
 body { 
     margin: 0; 
     padding-bottom: 1rem; 
@@ -27,6 +29,7 @@ body {
         grid-area: 1 / 1 / 2 / 10; 
         background-color: bisque;
         height: 10vh;
+        
     }
     .div2 { /*sidenav top*/
         grid-area: 2 / 1 / 5 / 2; 
@@ -36,15 +39,31 @@ body {
         text-decoration: none;
         font-size: 20px;
         color: #818181;
-        display: block
+        display: block;
     }
 
-    .div3{/*sidenav bottom*/
+    .div3{/*sidenav bottom user list*/
         grid-area: 5 / 1 / 8 / 2; 
-        background-color: rgba(255, 255, 255, 0.195);
         min-width: fit-content;
-        border-radius: 20px;
+        /* border-radius: 20px; */
+        /* max-width: 100%; */
+        overflow-x: hidden;
+        max-height: 60vh;
+        overflow-y: scroll;
+        padding: .5rem .5rem;
+        /* flex-grow: 7; */
     }
+        #user-list{
+            /* max-width: 85%; */
+        }
+        #user-list > li {
+            margin: .5rem;
+            font-size: 14px;
+            padding: .5rem .5rem; 
+            border-radius: 10px;
+            background-color: rgba(128, 128, 128, 0.27);
+            max-width: 90%;
+        }
 
     .div4 { /*messages & input*/
         grid-area: 2 / 2 / 7 / 5;  
@@ -54,35 +73,35 @@ body {
         overflow-y: scroll;
         
     }
-    .div4::-webkit-scrollbar {
-        display: none;
-      }
+        .div4::-webkit-scrollbar {
+            display: none;
+        }
 
-    .msg{
-        max-width: 85%;
-    }
-    #messages{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
+        .msg{
+            max-width: 85%;
+        }
+        #messages{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
 
 
-    #messages > li { 
-        margin: .5rem;
-        font-size: 14px;
-        padding: .5rem .5rem; 
-        border-radius: 10px;
-        background-color: rgba(128, 128, 128, 0.27);
-    }
+        #messages > li { 
+            margin: .5rem;
+            font-size: 14px;
+            padding: .5rem .5rem; 
+            border-radius: 10px;
+            background-color: rgba(128, 128, 128, 0.27);
+        }
 
-    #messages > li:nth-child(odd) { 
-        /* color:darkgreen;  */
-        background-color: #1e5ebe43;
-    }
+        #messages > li:nth-child(odd) { 
+            /* color:darkgreen;  */
+            background-color: #1e5ebe43;
+        }
 
-    ul {
-        padding: 0 0 0 0;
-        list-style-type: none;
-    }
+        ul {
+            padding: 0 0 0 0;
+            list-style-type: none;
+        }
 
     .div5 { /*button*/
         grid-area: 7 / 2 / 8 / 5; 
@@ -123,12 +142,10 @@ body {
 
     .div6 { /*Game*/
         grid-area: 2 / 5 / 8 / 10;
-        background-color: greenyellow;
-        /* flex-grow: 7; */
+        /* background-color: greenyellow; */
+        max-height: 100%;
+        max-width: 100%;
+        
+        /* min-width: 500px; */
     }
-    #gameBoard{
-        /* height: 40vh;
-        width: 80%; */
-        border: 3px solid;
-        /* padding: 1rem; */
-    }
+    

@@ -6,6 +6,7 @@ const { Server } = require('socket.io');
 const app = express();
 const server = createServer(app);
 const io = new Server(server);
+let users = [];
 
 app.get('/', (req, res) => {
   res.sendFile(join(__dirname, 'index.html'));
@@ -13,20 +14,31 @@ app.get('/', (req, res) => {
 app.use(express.static('public'));
 
 io.on('connection', (socket) => {
-//   console.log(`user ${socket.id} connected`);
+
+  io.emit('welcome message', `${socket.id} has arrived!`)
+  
+  socket.on("join server", (username) => { //welcome message
+    const user = {
+      username,
+      id: socket.id
+    }
+      users.push(user);
+      io.emit("new user", users);
+  })
+
 
   socket.on('chat message', (msg) => {
     io.emit('chat message', msg);
   });
 
   socket.on('gameOver', (score) => {
-    // Emit the score to all connected clients
-    io.emit('scoreUpdate', `Game over! User# ${socket.id}'s score: ${score}`);
+
+    io.emit('scoreUpdate', `Game over! ${socket.id} got a score of ${score}`);
 });
 
 
-  socket.on('disconnect', () => {
-    // console.log(`user ${socket.id} disconnected`);
+  socket.on('disconnect', (socket) => {
+    io.emit('disconnection', `${socket.id} has left`)
   });
 });
 
